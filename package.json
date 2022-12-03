@@ -6,9 +6,13 @@
   "version": "0.0.0",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "lint": "eslint ./src --ext .tsx --ext .ts --max-warnings 0",
+        "format": "prettier --config .prettierrc --write src/**/*.{ts,tsx}"
   },
   "dependencies": {
     "react": "^18.0.0",
